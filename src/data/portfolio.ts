@@ -18,6 +18,16 @@ export interface SocialLink {
   url: string;
 }
 
+export interface ExperienceItem {
+  role: string;
+  company: string;
+  period: string;
+  location?: string;
+  description?: string;
+  highlights: string[];
+  technologies?: string[];
+}
+
 export interface EducationItem {
   period: string;
   degree: string;
@@ -47,12 +57,12 @@ export interface SectionItem {
 export interface Portfolio {
   basics: BasicInfo;
   socials: SocialLink[];
-  experience: any[];
+  experience: ExperienceItem[];
   education: EducationItem[];
   projects: ProjectItem[];
   skills: SkillCategory[];
   sections: SectionItem[];
 }
 
-export const portfolio: Portfolio = portfolioData;
+export const portfolio: Portfolio = portfolioData as Portfolio;
 export default portfolio;

@@ -1,0 +1,52 @@
+---
+import portfolio from '../data/portfolio';
+
+const { experience } = portfolio;
+---
+
+<section id="experience" class="flex min-h-screen items-center justify-center px-6 py-20" aria-label="Work Experience">
+  <div class="w-full max-w-3xl">
+    <h2 class="mb-12 text-center text-sm font-bold uppercase tracking-widest text-primary">Experience</h2>
+    <div class="space-y-8">
+      {experience.map((exp) => (
+        <div
+          class="group relative rounded-xl border border-border bg-card p-8 transition-all hover:border-primary/30 hover:shadow-lg"
+        >
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <h3 class="text-xl font-semibold text-foreground">{exp.role}</h3>
+              <p class="mt-2 text-base font-medium text-primary">{exp.company}</p>
+              {exp.location && <p class="text-sm text-muted-foreground">{exp.location}</p>}
+            </div>
+            <span class="mt-2 rounded-full bg-secondary px-4 py-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground sm:mt-0">
+              {exp.period}
+            </span>
+          </div>
+          
+          {exp.description && (
+            <p class="mt-4 text-base text-muted-foreground">{exp.description}</p>
+          )}
+
+          <ul class="mt-6 space-y-3 text-base leading-relaxed text-muted-foreground">
+            {exp.highlights.map((highlight) => (
+              <li class="flex items-start gap-3">
+                <span class="mt-2.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary/70"></span>
+                <span>{highlight}</span>
+              </li>
+            ))}
+          </ul>
+
+          {exp.technologies && exp.technologies.length > 0 && (
+            <div class="mt-6 flex flex-wrap gap-2" aria-label="Technologies used">
+              {exp.technologies.map((tech) => (
+                <span class="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

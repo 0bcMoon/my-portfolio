@@ -2,12 +2,12 @@
   "basics": {
     "name": "Hicham Benoukaiss",
     "label": "Software Engineer",
-    "bio": "Computer Science student passionate about building scalable, secure full-stack applications. Experienced in developing real-time systems and microservices through hands-on projects at 1337 Coding School.",
-    "techStack": ["TypeScript", "Java", "React.js", "Node.js", "Spring Boot", "PostgreSQL", "Docker"],
+    "bio": "Junior Software Developer with experience building production mobile and full-stack applications using React Native, TypeScript, Java, and Spring Boot. Strong foundation in algorithms, system design, and backend development through the 1337 Coding School curriculum.",
+    "techStack": ["TypeScript", "Java", "React Native", "React.js", "Spring Boot", "Fastify", "PostgreSQL", "Docker"],
     "email": "hichambenoukaiss76@gmail.com",
     "phone": "+212-601315952",
     "location": "Morocco",
-    "languages": ["English (Fluent)", "Arabic (Native)", "French (Proficient)"],
+    "languages": ["English (Fluent)", "Arabic (Native)", "French (Professional)"],
     "status": "I'm currently looking for an internship opportunity. Whether you have a question or just want to say hi, feel free to reach out!"
   },
   "socials": [
@@ -32,18 +32,35 @@
       "url": "tel:+212601315952"
     }
   ],
-  "experience": [],
+  "experience": [
+    {
+      "role": "Software Developer Intern",
+      "company": "WeSports",
+      "period": "2026",
+      "location": "Morocco",
+      "description": "Developed and shipped production mobile features and backend services in a collaborative engineering team.",
+      "highlights": [
+        "Developed and shipped production mobile features using React Native by building reusable, maintainable components that improved development efficiency and user experience.",
+        "Designed and implemented RESTful backend APIs with Spring Boot to support core application functionality.",
+        "Integrated AI-powered backend functionality by connecting inference services with existing APIs and business logic.",
+        "Reduced unnecessary API requests and improved application responsiveness through client-side caching strategies.",
+        "Collaborated with DevOps, Data Engineering, and AI teams to integrate deployment workflows, backend services, and data pipelines.",
+        "Improved application reliability by debugging production issues, optimizing performance, and implementing new features."
+      ],
+      "technologies": ["React Native", "Spring Boot", "REST APIs", "AI Integration", "Caching", "DevOps"]
+    }
+  ],
   "education": [
     {
-      "period": "2023 — 2025",
+      "period": "2023 — 2026",
       "degree": "Software Engineering",
-      "institution": "1337 Coding School, 42 Network",
+      "institution": "1337 Coding School (42 Network)",
       "location": "Khouribga, Morocco",
       "description": "Intensive, project-based curriculum in software development, algorithms, and system design."
     },
     {
       "period": "2020 — 2024",
-      "degree": "Bachelor's Degree in Fundamental Sciences",
+      "degree": "Bachelor's Degree in Fundamental Sciences (Mathematics and Computer Science)",
       "institution": "Faculté Polydisciplinaire de Khouribga",
       "location": "Morocco",
       "description": "Specialized in applied mathematics, data structures, and software engineering principles."
@@ -51,24 +68,24 @@
   ],
   "projects": [
     {
-      "title": "Ping Pong",
+      "title": "Ping Pong Platform",
       "year": "2025",
-      "description": "Built a full-stack real-time ping pong game with user management, friend-based gameplay, and integrated chat using TypeScript, React, and Node.js with Fastify. Implemented OAuth 2.0 with JWT for secure authentication.",
-      "tech": ["TypeScript", "React", "Node.js", "PostgreSQL", "WebSocket"],
+      "description": "Built a full-stack real-time multiplayer platform featuring authentication, matchmaking, friend management, and integrated chat using TypeScript, React, and Fastify. Implemented OAuth 2.0 with JWT and PostgreSQL for persistent data storage.",
+      "tech": ["TypeScript", "React", "Fastify", "PostgreSQL", "WebSocket", "OAuth 2.0"],
       "link": "#"
     },
     {
-      "title": "WebServer",
+      "title": "HTTP Web Server",
       "year": "2024",
-      "description": "Developed a high-performance HTTP server using C++ with non-blocking I/O and epoll/kqueue. Implemented request routing and static file serving for optimal performance.",
-      "tech": ["C++", "HTTP", "epoll/kqueue", "Non-blocking I/O"],
+      "description": "Built an HTTP/1.1 web server from scratch in C++. Implemented non-blocking I/O using epoll (Linux) and kqueue (macOS) to support concurrent client connections, request routing, static file serving, and CGI execution.",
+      "tech": ["C++", "HTTP/1.1", "epoll/kqueue", "Non-blocking I/O", "CGI"],
       "link": "#"
     },
     {
-      "title": "Inception",
+      "title": "Inception – Dockerized WordPress Infrastructure",
       "year": "2024",
-      "description": "Deployed a secure WordPress stack using Docker Compose, integrating NGINX, PHP-FPM, MariaDB, and Redis. Configured TLSv1.3 and Adminer, improving uptime significantly.",
-      "tech": ["Docker", "NGINX", "MariaDB", "Redis", "TLSv1.3"],
+      "description": "Designed and deployed a production-like multi-container infrastructure using Docker Compose. Configured NGINX, WordPress, PHP-FPM, MariaDB, and Redis with isolated networking, TLS 1.3, and containerization best practices.",
+      "tech": ["Docker", "Docker Compose", "NGINX", "MariaDB", "Redis", "TLS 1.3"],
       "link": "#"
     },
     {
@@ -81,24 +98,29 @@
   ],
   "skills": [
     {
-      "title": "Languages",
-      "skills": ["TypeScript", "Java", "JavaScript", "C", "C++"]
+      "title": "Programming Languages",
+      "skills": ["TypeScript", "Java", "C", "C++", "SQL"]
     },
     {
-      "title": "Frameworks & Libraries",
-      "skills": ["React.js", "Node.js", "Express", "Spring Boot", "Spring Security", "Hibernate", "Tailwind CSS"]
+      "title": "Frontend & Mobile",
+      "skills": ["React", "React Native", "Tailwind CSS"]
     },
     {
-      "title": "Tools & Technologies",
-      "skills": ["Docker", "PostgreSQL", "MariaDB", "Redis", "NGINX", "CI/CD", "Linux", "Vim"]
+      "title": "Backend & Frameworks",
+      "skills": ["Spring Boot", "Express.js", "Fastify", "Spring Security", "Hibernate"]
     },
     {
-      "title": "Concepts",
-      "skills": ["Microservices", "RESTful APIs", "Event-driven", "OOP", "OAuth 2.0", "JWT"]
+      "title": "Databases & DevOps",
+      "skills": ["PostgreSQL", "Redis", "MariaDB", "Docker", "Docker Compose", "Git", "Linux", "NGINX", "CI/CD"]
+    },
+    {
+      "title": "Concepts & Technologies",
+      "skills": ["REST APIs", "WebSocket", "Microservices", "OAuth 2.0", "JWT", "AI Integration", "Event-driven", "OOP"]
     }
   ],
   "sections": [
     { "id": "hero", "label": "Intro" },
+    { "id": "experience", "label": "Experience" },
     { "id": "education", "label": "Education" },
     { "id": "projects", "label": "Projects" },
     { "id": "skills", "label": "Skills" },
