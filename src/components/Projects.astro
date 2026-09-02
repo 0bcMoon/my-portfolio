@@ -1,0 +1,46 @@
+---
+import portfolio from '../data/portfolio';
+import Icon from './Icon.astro';
+
+const { projects } = portfolio;
+---
+
+<section
+  id="projects"
+  class="flex min-h-screen items-center justify-center px-6 py-20"
+  aria-label="Selected projects"
+>
+  <div class="w-full max-w-4xl">
+    <h2 class="mb-12 text-center text-sm font-bold uppercase tracking-widest text-primary">Projects</h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      {projects.map((project) => (
+        <a
+          href={project.link}
+          target={project.link.startsWith('http') ? "_blank" : undefined}
+          rel={project.link.startsWith('http') ? "noopener noreferrer" : undefined}
+          class="group flex flex-col rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/30 hover:shadow-lg"
+        >
+          <div class="flex items-start justify-between">
+            <div class="flex items-center gap-2">
+              <h3 class="text-lg font-semibold text-foreground group-hover:text-primary">{project.title}</h3>
+              <Icon name="arrow-up-right" class="h-4 w-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
+            </div>
+            <span class="rounded-full bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+              {project.year}
+            </span>
+          </div>
+          <p class="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
+          <ul class="mt-5 flex flex-wrap gap-2" aria-label="Technologies used">
+            {project.tech.map((tech) => (
+              <li>
+                <span class="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                  {tech}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

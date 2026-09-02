@@ -1,0 +1,107 @@
+{
+  "basics": {
+    "name": "Hicham Benoukaiss",
+    "label": "Software Engineer",
+    "bio": "Computer Science student passionate about building scalable, secure full-stack applications. Experienced in developing real-time systems and microservices through hands-on projects at 1337 Coding School.",
+    "techStack": ["TypeScript", "Java", "React.js", "Node.js", "Spring Boot", "PostgreSQL", "Docker"],
+    "email": "hichambenoukaiss76@gmail.com",
+    "phone": "+212-601315952",
+    "location": "Morocco",
+    "languages": ["English (Fluent)", "Arabic (Native)", "French (Proficient)"],
+    "status": "I'm currently looking for an internship opportunity. Whether you have a question or just want to say hi, feel free to reach out!"
+  },
+  "socials": [
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com"
+    },
+    {
+      "name": "LinkedIn",
+      "icon": "linkedin",
+      "url": "https://linkedin.com"
+    },
+    {
+      "name": "Email",
+      "icon": "mail",
+      "url": "mailto:hichambenoukaiss76@gmail.com"
+    },
+    {
+      "name": "Phone",
+      "icon": "phone",
+      "url": "tel:+212601315952"
+    }
+  ],
+  "experience": [],
+  "education": [
+    {
+      "period": "2023 — 2025",
+      "degree": "Software Engineering",
+      "institution": "1337 Coding School, 42 Network",
+      "location": "Khouribga, Morocco",
+      "description": "Intensive, project-based curriculum in software development, algorithms, and system design."
+    },
+    {
+      "period": "2020 — 2024",
+      "degree": "Bachelor's Degree in Fundamental Sciences",
+      "institution": "Faculté Polydisciplinaire de Khouribga",
+      "location": "Morocco",
+      "description": "Specialized in applied mathematics, data structures, and software engineering principles."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Ping Pong",
+      "year": "2025",
+      "description": "Built a full-stack real-time ping pong game with user management, friend-based gameplay, and integrated chat using TypeScript, React, and Node.js with Fastify. Implemented OAuth 2.0 with JWT for secure authentication.",
+      "tech": ["TypeScript", "React", "Node.js", "PostgreSQL", "WebSocket"],
+      "link": "#"
+    },
+    {
+      "title": "WebServer",
+      "year": "2024",
+      "description": "Developed a high-performance HTTP server using C++ with non-blocking I/O and epoll/kqueue. Implemented request routing and static file serving for optimal performance.",
+      "tech": ["C++", "HTTP", "epoll/kqueue", "Non-blocking I/O"],
+      "link": "#"
+    },
+    {
+      "title": "Inception",
+      "year": "2024",
+      "description": "Deployed a secure WordPress stack using Docker Compose, integrating NGINX, PHP-FPM, MariaDB, and Redis. Configured TLSv1.3 and Adminer, improving uptime significantly.",
+      "tech": ["Docker", "NGINX", "MariaDB", "Redis", "TLSv1.3"],
+      "link": "#"
+    },
+    {
+      "title": "Password Manager",
+      "year": "2024",
+      "description": "Developed a secure password storage application with React, Tailwind CSS, and Spring Boot. Used Spring Security and PostgreSQL for encrypted storage and authentication.",
+      "tech": ["React", "Spring Boot", "PostgreSQL", "Spring Security"],
+      "link": "#"
+    }
+  ],
+  "skills": [
+    {
+      "title": "Languages",
+      "skills": ["TypeScript", "Java", "JavaScript", "C", "C++"]
+    },
+    {
+      "title": "Frameworks & Libraries",
+      "skills": ["React.js", "Node.js", "Express", "Spring Boot", "Spring Security", "Hibernate", "Tailwind CSS"]
+    },
+    {
+      "title": "Tools & Technologies",
+      "skills": ["Docker", "PostgreSQL", "MariaDB", "Redis", "NGINX", "CI/CD", "Linux", "Vim"]
+    },
+    {
+      "title": "Concepts",
+      "skills": ["Microservices", "RESTful APIs", "Event-driven", "OOP", "OAuth 2.0", "JWT"]
+    }
+  ],
+  "sections": [
+    { "id": "hero", "label": "Intro" },
+    { "id": "education", "label": "Education" },
+    { "id": "projects", "label": "Projects" },
+    { "id": "skills", "label": "Skills" },
+    { "id": "contact", "label": "Contact" }
+  ]
+}

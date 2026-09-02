@@ -1,0 +1,43 @@
+---
+import portfolio from '../data/portfolio';
+import Icon from './Icon.astro';
+
+const { basics } = portfolio;
+---
+
+<section id="contact" class="flex min-h-screen items-center justify-center px-6 py-20" aria-label="Contact">
+  <div class="w-full max-w-2xl text-center">
+    <h2 class="mb-6 text-sm font-bold uppercase tracking-widest text-primary">Contact</h2>
+    <h3 class="text-3xl font-bold text-foreground sm:text-4xl">Let's Work Together</h3>
+    <p class="mx-auto mt-6 max-w-lg text-lg text-muted-foreground">
+      {basics.status}
+    </p>
+
+    <a
+      href={`mailto:${basics.email}`}
+      class="group mt-10 inline-flex items-center gap-3 rounded-full border border-primary bg-primary/10 px-8 py-4 text-lg font-medium text-primary transition-all hover:bg-primary hover:text-primary-foreground"
+    >
+      <Icon name="mail" class="h-5 w-5" />
+      <span>{basics.email}</span>
+      <Icon name="arrow-up-right" class="h-5 w-5 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+    </a>
+
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-6 text-muted-foreground">
+      <div class="flex items-center gap-2">
+        <Icon name="phone" class="h-4 w-4" />
+        <span>{basics.phone}</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <Icon name="map-pin" class="h-4 w-4" />
+        <span>{basics.location}</span>
+      </div>
+    </div>
+
+    <p class="mt-8 text-sm text-muted-foreground">
+      <span class="font-medium text-foreground">Languages:</span> {basics.languages.join(' · ')}
+    </p>
+
+    <footer class="mt-20 border-t border-border pt-8 text-sm text-muted-foreground">
+    </footer>
+  </div>
+</section>

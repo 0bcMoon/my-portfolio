@@ -1,0 +1,65 @@
+---
+const particles = Array.from({ length: 20 }, (_, i) => ({
+  left: `${(i * 17) % 100}%`,
+  top: `${(i * 23) % 100}%`,
+  delay: `${i * 0.2}s`,
+  duration: `${2 + (i % 3)}s`,
+}));
+---
+
+<div class="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden="true">
+  <!-- Main cursor glow -->
+  <div
+    id="cursor-glow-main"
+    class="absolute h-[600px] w-[600px] rounded-full opacity-20 blur-[120px] transition-transform duration-300 ease-out will-change-transform"
+    style="background: radial-gradient(circle, var(--color-primary, oklch(0.75 0.15 175)) 0%, transparent 70%); transform: translate(-300px, -300px);"
+  >
+  </div>
+
+  <!-- Secondary smaller glow for depth -->
+  <div
+    id="cursor-glow-secondary"
+    class="absolute h-[300px] w-[300px] rounded-full opacity-15 blur-[80px] transition-transform duration-500 ease-out will-change-transform"
+    style="background: radial-gradient(circle, hsl(180, 70%, 50%) 0%, transparent 70%); transform: translate(-200px, -400px);"
+  >
+  </div>
+
+  <!-- Subtle grid pattern -->
+  <div
+    class="absolute inset-0 opacity-[0.03]"
+    style="background-image: linear-gradient(var(--color-primary, oklch(0.75 0.15 175)) 1px, transparent 1px), linear-gradient(90deg, var(--color-primary, oklch(0.75 0.15 175)) 1px, transparent 1px); background-size: 60px 60px;"
+  >
+  </div>
+
+  <!-- Floating particles -->
+  <div class="absolute inset-0">
+    {particles.map((p) => (
+      <div
+        class="absolute h-1 w-1 rounded-full bg-primary/20 animate-pulse"
+        style={`left: ${p.left}; top: ${p.top}; animation-delay: ${p.delay}; animation-duration: ${p.duration};`}
+      />
+    ))}
+  </div>
+</div>
+
+<script>
+  function setupCursor() {
+    const glowMain = document.getElementById('cursor-glow-main');
+    const glowSec = document.getElementById('cursor-glow-secondary');
+
+    if (!glowMain || !glowSec) return;
+
+    window.addEventListener('mousemove', (e) => {
+      const x = e.clientX;
+      const y = e.clientY;
+      glowMain.style.transform = `translate(${x - 300}px, ${y - 300}px)`;
+      glowSec.style.transform = `translate(${x - 150 + 100}px, ${y - 150 - 100}px)`;
+    }, { passive: true });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupCursor);
+  } else {
+    setupCursor();
+  }
+</script>
